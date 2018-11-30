@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Button,Modal,Popover,Tooltip,OverlayTrigger } from 'react-bootstrap';
+import { Button, Modal, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 class Example extends React.Component {
   constructor(props, context) {
