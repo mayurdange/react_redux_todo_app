@@ -1,28 +1,20 @@
 
-const initialState = {
-      todos: [
-          {title:'note 1' , contents:'notes abc'},
-          {title:'note 2' , contents:'notes xyz'},
-          {title:'note 3' , contents:'notes def'}
-        ]
-    };
+const initialState = [
+          {title:"title",contents:"contents", key:1}
+        ];
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
     case "ADD_TODO":
-      return {...state,todos : state.todos.append({title:'note 1' , contents:'notes abc'})};
+      return [...state,{title:action.payload.title , contents:action.payload.content} ];
     default:
       return state;
   }
 }
 
-export var addNewTodo1 = (title,contents)=>{
-  console.error(`NOT IMPLEMENTED! should add todo ${title} ${contents}`);
-}
-
-export const addNewTodo = content => ({
+export const addNewTodo = (title,content) => ({
   type: "ADD_TODO",
   payload: {
-    content
+    content, title
   }
 });

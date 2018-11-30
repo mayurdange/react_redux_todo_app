@@ -8,7 +8,7 @@ class TodoList extends Component{
         var data = this.props.data;
         return (
              <div className="container">
-                <div className="row">{ data.todos.map( (a,i) =>  <Todo title={a.title} contents = {a.contents} key={i} />  )}</div>
+                <div className="row">{ data.map( (a,i) =>  <Todo title={a.title} contents = {a.contents} key={i} />  )}</div>
                 <AddTodo />
             </div>
         );
